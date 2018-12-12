@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ApiCallManager.h"
+#import "Constants.h"
+#import "HTTPRequestHandler.h"
+#import "JSON.h"
+#import "Reachability.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ApiCallManagerDelegate,HTTPRequestHandlerDelegate>{
+    HTTPRequestHandler *requestHandler;
+    id<ApiCallManagerDelegate>_delegate;
+}
 
 
 @end
